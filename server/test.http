@@ -1,0 +1,14 @@
+@uri=http://127.0.0.1:3000/admin/api/
+GET {{uri}}comment
+
+###
+
+POST {{uri}}comment
+Content-Type: application/json
+
+{
+  "edit":"aaa",
+  "name":"hahah",
+  "time":"2020/11/15"
+}
+

@@ -1,0 +1,20 @@
+div.moon {
+  color: #eee !important;
+  background-color: #302d2d !important;
+}
+
+
+@media screen and (min-width: 800px) {
+
+  /* 滚动条 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+  }
+
+  /* 滚动条上的滑块 */
+  ::-webkit-scrollbar-thumb {
+    background-color: #c1c4ce;
+    border-radius: 3px;
+  }
+}
