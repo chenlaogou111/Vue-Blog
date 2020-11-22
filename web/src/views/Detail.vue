@@ -12,7 +12,7 @@
       <el-image :src="data.cover"></el-image>
     </div>
     <div class="detail-container">
-      <div class="edit-body" v-html="data.editor"></div>
+      <div class="edit-body" v-highlight v-html="data.editor"></div>
       <div class="likebtn">
         <svg
           t="1605354215881"
@@ -187,6 +187,12 @@ export default {
 .detail .detail-container .edit-body {
   padding: 40px 5%;
 }
+.detail .detail-container .edit-body img {
+  max-width: 100%;
+  -webkit-box-sizing: initial;
+  box-sizing: initial;
+  background-color: #fff;
+}
 .detail .detail-container .likebtn {
   width: 100%;
   text-align: center;
@@ -248,4 +254,8 @@ export default {
   margin: 0;
   font-size: 14px;
 }
+/* pre {
+  color: #c5c3c3;
+  background-color: #2b2b2b;
+} */
 </style>
