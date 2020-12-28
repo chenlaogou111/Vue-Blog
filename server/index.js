@@ -4,6 +4,8 @@ const app = express();
 // 启动服务端口
 const Port = 3000;
 
+app.set('secret', 'shihao')
+
 /* 
   允许跨域
 */

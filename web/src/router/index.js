@@ -53,19 +53,16 @@ const router = new VueRouter({
       title: "文章"
     }
   }],
-  linkActiveClass: 'current'
+  linkActiveClass: 'current',
+  mode: "history"
 })
-
-router.beforeEach((to, from, next) => {
-  /* 路由发生变化修改页面title */
-  document.title = `${to.meta.title} | 前端老刘`
-  next()
-})
-
 
 import NProgress from 'nprogress' //顶部进度条
 import 'nprogress/nprogress.css'
 router.beforeEach((to, from, next) => {
+  /* 路由发生变化修改页面title */
+  document.title = `${to.meta.title} | 前端老刘`
+  next()
   NProgress.start() //开启
   next()
 })

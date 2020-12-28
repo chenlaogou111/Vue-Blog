@@ -83,8 +83,8 @@
       type="info"
       target="_blank"
       :underline="false"
-      href="https://beian.miit.gov.cn/"
-      >渝ICP备20004282号-1</el-link
+      href="http://icp.chinaz.com/home/info?host=lshblog.top"
+      >冀ICP备2020029330号-1</el-link
     >
   </el-footer>
 </template>

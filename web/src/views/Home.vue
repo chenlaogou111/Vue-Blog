@@ -87,7 +87,7 @@ export default {
   components: {},
   methods: {
     async fetch() {
-      const res = await this.$http.get(`categories`);
+      const res = await this.$http.get(`/home/categories`);
       this.data = res.data;
       this.pageTotal = res.data.length;
       this.data = this.data.slice(0, this.pageSize);
@@ -99,7 +99,7 @@ export default {
     changeSize() {},
     async changePage(val) {
       console.log(val);
-      const res = await this.$http.get(`categories/${val}`);
+      const res = await this.$http.get(`/home/categories/${val}`);
       this.data = res.data;
     },
   },

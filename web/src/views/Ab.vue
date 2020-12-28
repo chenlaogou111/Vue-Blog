@@ -129,16 +129,19 @@ export default {
       data: [
         "前端资深炮灰",
         "退堂鼓国家一级表演艺术家",
-        "W3C忠实的粉丝与倡导者",
+        "洛圣都五星好市民",
+        "Overwatch幼儿源",
+        "资深方块人",
+        /* "W3C忠实的粉丝与倡导者",
         "WEB标准与规范表里如一的践行者",
-        "网站移动互联技术坚定不移的追随者",
+        "网站移动互联技术坚定不移的追随者", */
       ],
       avatarURL: require("@/assets/img/4.png"),
     };
   },
 
   created() {
-    console.log(__dirname);
+    // console.log(__dirname);
   },
 };
 </script>

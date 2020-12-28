@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     async fetch() {
-      const res = await this.$http.get(`categories`);
+      const res = await this.$http.get(`/home/categories`);
       for (const val of res.data) {
         this.allTag.push(val.tags);
       }
@@ -80,7 +80,7 @@ export default {
       }
       tag.active = true;
 
-      const article = await this.$http.get(`categories/tags/${tag.tag}`);
+      const article = await this.$http.get(`/home/categories/tags/${tag.tag}`);
       this.data = article.data;
     },
     gotoDetail(item) {

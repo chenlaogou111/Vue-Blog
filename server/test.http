@@ -3,12 +3,11 @@ GET {{uri}}comment
 
 ###
 
-POST {{uri}}comment
+POST {{uri}}admin_users
 Content-Type: application/json
 
 {
-  "edit":"aaa",
-  "name":"hahah",
-  "time":"2020/11/15"
+  "username":"haohao",
+  "password":"921435hh"
 }
 

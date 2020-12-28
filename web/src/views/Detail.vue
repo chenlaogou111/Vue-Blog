@@ -110,16 +110,23 @@ export default {
       this.data = res.data;
 
       const comment = await this.$http.get(
-        `/categories/comment/${this.$route.query.id}`
+        `/home/categories/comment/${this.$route.query.id}`
       );
       this.commentItem = comment.data.comment;
     },
     async sendComment() {
+      if (!this.comment.name || !this.comment.edit) {
+        this.$message({
+          type: "warning",
+          message: "请输入正确",
+        });
+        return false;
+      }
       const date = new Date();
       this.comment.time = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}  ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}
       `;
       await this.$http.put(
-        `/categories/comment/${this.$route.query.id}`,
+        `/home/categories/comment/${this.$route.query.id}`,
         this.comment
       );
       this.fetch();
