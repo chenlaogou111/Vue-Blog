@@ -31,7 +31,9 @@ export default {
   methods: {
     async save() {
       const date = new Date();
-      this.model.time = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+      this.model.time = `${date.getFullYear()}-${
+        date.getMonth() + 1
+      }-${date.getDate()}`;
       let res, contxt;
       res = await this.$http.post("/timeline", this.model);
 

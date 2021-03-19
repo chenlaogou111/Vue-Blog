@@ -72,7 +72,9 @@ export default {
       }
 
       const date = new Date();
-      this.comment.time = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+      this.comment.time = `${date.getFullYear()}-${
+        date.getMonth() + 1
+      }-${date.getDate()}`;
       const res = await this.$http.post("/comment", this.comment);
 
       this.fetch();

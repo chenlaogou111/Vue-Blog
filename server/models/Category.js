@@ -7,7 +7,8 @@ const schema = new mongoose.Schema({
   tags: Array,
   editor: String,
   cover: String,
-  comment: Array
+  comment: Array,
+  isHot: String
 })
 
 module.exports = mongoose.model("Category", schema)

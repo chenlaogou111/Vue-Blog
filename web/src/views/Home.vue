@@ -91,7 +91,14 @@ export default {
       this.data = res.data;
       this.pageTotal = res.data.length;
       this.data = this.data.slice(0, this.pageSize);
-      this.carouselItem = this.data.slice(0, 4);
+      const detailHot = [];
+
+      for (const obj in this.data) {
+        if (this.data[obj]["isHot"] === "yes") {
+          detailHot[obj] = this.data[obj];
+        }
+      }
+      this.carouselItem = detailHot;
     },
     gotoDetail(item) {
       this.$router.push({ path: "/detail", query: { id: item._id } });

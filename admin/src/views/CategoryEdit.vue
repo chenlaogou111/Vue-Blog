@@ -26,6 +26,11 @@
         <new-btn @new-tag="newTag"></new-btn>
       </el-form-item>
 
+      <el-form-item label="置顶文章">
+        <el-radio v-model="model.isHot" label="yes">是</el-radio>
+        <el-radio v-model="model.isHot" label="no">否</el-radio>
+      </el-form-item>
+
       <el-form-item label="写点什么吧">
         <vue-editor
           v-model="model.editor"
@@ -55,7 +60,9 @@ export default {
   },
   data() {
     return {
-      model: {},
+      model: {
+        isHot: "no",
+      },
     };
   },
   methods: {
@@ -72,7 +79,9 @@ export default {
     },
     async save() {
       const date = new Date();
-      this.model.time = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+      this.model.time = `${date.getFullYear()}-${
+        date.getMonth() + 1
+      }-${date.getDate()}`;
       let res, contxt;
       if (this.id) {
         res = await this.$http.put(`/categories/${this.id}`, this.model);
