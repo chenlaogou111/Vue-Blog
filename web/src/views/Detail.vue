@@ -86,7 +86,7 @@
             <h5>{{ item.name }}</h5>
             <p>{{ item.edit }}</p>
             <p class="time">
-              <span>{{ item.time }}</span>
+              <span>{{ item.time | dateFormat }}</span>
             </p>
           </el-card>
         </div>

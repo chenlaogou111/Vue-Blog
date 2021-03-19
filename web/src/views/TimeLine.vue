@@ -4,7 +4,7 @@
       <el-timeline-item
         v-for="item in data"
         :key="item._id"
-        :timestamp="item.time"
+        :timestamp="item.time | dateFormat('yyyy-mm-dd')"
         placement="top"
       >
         <el-card>

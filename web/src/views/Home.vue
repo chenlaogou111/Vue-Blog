@@ -27,7 +27,7 @@
           </div>
           <p>{{ item.summary }}</p>
           <div class="info-footer">
-            <span class="time">{{ item.time }}</span>
+            <span class="time">{{ item.time | dateFormat("yyyy-mm-dd") }}</span>
             <span class="info-detail">
               <i
                 ><svg

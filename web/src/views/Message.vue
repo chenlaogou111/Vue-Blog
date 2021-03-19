@@ -41,7 +41,7 @@
           <h5>{{ item.name }}</h5>
           <p>{{ item.edit }}</p>
           <p class="time">
-            <span>{{ item.time }}</span>
+            <span>{{ item.time | dateFormat("yyyy-mm-dd") }}</span>
           </p>
         </el-card>
       </div>

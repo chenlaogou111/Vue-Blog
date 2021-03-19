@@ -140,9 +140,7 @@ export default {
     };
   },
 
-  created() {
-    // console.log(__dirname);
-  },
+  created() {},
 };
 </script>
 

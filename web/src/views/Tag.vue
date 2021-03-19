@@ -28,7 +28,7 @@
           </div>
           <p>{{ item.summary }}</p>
           <div class="info-footer">
-            <span class="time">{{ item.time }}</span>
+            <span class="time">{{ item.time | dateFormat("yyyy-mm-dd") }}</span>
           </div>
         </div>
         <el-image :src="item.cover"></el-image>
