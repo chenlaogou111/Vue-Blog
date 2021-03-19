@@ -53,8 +53,7 @@ const router = new VueRouter({
       title: "文章"
     }
   }],
-  linkActiveClass: 'current',
-  mode: "history"
+  linkActiveClass: 'current'
 })
 
 import NProgress from 'nprogress' //顶部进度条
